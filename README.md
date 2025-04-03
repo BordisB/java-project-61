@@ -10,4 +10,5 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=BordisB_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=BordisB_java-project-61)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=BordisB_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=BordisB_java-project-61)[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=BordisB_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=BordisB_java-project-61)
 
-https://asciinema.org/a/JZOwwflCnhjYHvRyWgJLf2qsX
+https://asciinema.org/a/JZOwwflCnhjYHvRyWgJLf2qsX IsEven
+https://asciinema.org/a/vPCpsvaby4u2iEBHv6DDxIO60 Calculator

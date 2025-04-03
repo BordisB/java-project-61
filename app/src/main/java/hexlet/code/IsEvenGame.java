@@ -1,38 +1,28 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
 public class IsEvenGame {
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final int MAX_NUMBER = 100;
+
     public static void start() {
-        Scanner scanner = new Scanner(System.in);
+        String[][] roundsData = generateRoundsData();
+        Engine.runGame(RULES, roundsData);
+    }
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String userName = scanner.nextLine();
-        System.out.println("Hello, " + userName + "!");
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    private static String[][] generateRoundsData() {
+        String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
 
-        int roundsCount = 5;
-        int maxNumber = 100;
-
-        for (int i = 0; i < roundsCount; i++) {
-            int number = (int) (Math.random() * maxNumber) + 1;
-            System.out.println("Question: " + number);
-            System.out.print("Your answer: ");
-            String userAnswer = scanner.nextLine().toLowerCase();
-            String correctAnswer = number % 2 == 0 ? "yes" : "no";
-
-            if (!userAnswer.equals(correctAnswer)) {
-                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n",
-                        userAnswer, correctAnswer);
-                System.out.printf("Let's try again, %s!\n", userName);
-                scanner.close();
-                return;
-            }
-            System.out.println("Correct!");
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            int number = Utils.getRandomNumber(MAX_NUMBER);
+            String question = Integer.toString(number);
+            String answer = isEven(number) ? "yes" : "no";
+            roundsData[i] = new String[] {question, answer};
         }
 
-        System.out.printf("Congratulations, %s!\n", userName);
-        scanner.close();
+        return roundsData;
+    }
+
+    private static boolean isEven(int number) {
+        return number % 2 == 0;
     }
 }
