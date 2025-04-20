@@ -1,4 +1,7 @@
-package hexlet.code;
+package hexlet.code.games;
+
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class IsEvenGame {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
