@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Utils {
     private static final Random RANDOM = new Random();
-    private static final int DEFAULT_MAX = 100; // Стандартный верхний предел
+    private static final int DEFAULT_MAX = 100;
 
     public static int getRandomNumber(int min, int max) {
         return RANDOM.nextInt(max - min + 1) + min;

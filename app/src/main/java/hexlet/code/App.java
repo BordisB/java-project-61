@@ -14,11 +14,12 @@ public class App {
         System.out.println("3 - Calculator");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера после nextInt()
+        scanner.nextLine();
 
         switch (choice) {
             case 1:
@@ -35,6 +36,9 @@ public class App {
                 break;
             case 5:
                 Progression.start();
+                break;
+            case 6:
+                Primegame.start();
                 break;
             case 0:
                 System.out.println("Goodbye!");
