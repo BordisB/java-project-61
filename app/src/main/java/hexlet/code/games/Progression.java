@@ -7,6 +7,7 @@ public class Progression {
     private static final String RULES = "What number is missing in the progression?";
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
+    private static final int MAX_NUMBER = 10;
 
     public static void start() {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
@@ -14,7 +15,7 @@ public class Progression {
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int progressionLength = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
             int start = Utils.getRandomNumber();
-            int step = Utils.getRandomNumber(1, 10);
+            int step = Utils.getRandomNumber(1, MAX_NUMBER);
             int hiddenIndex = Utils.getRandomNumber(0, progressionLength - 1);
 
             int[] progression = generateProgression(start, step, progressionLength);

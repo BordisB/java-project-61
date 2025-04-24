@@ -7,13 +7,14 @@ public class Calculator {
 
     private static final String RULES = "What is the result of the expression?";
     private static final char[] OPERATORS = {'+', '-', '*'};
+    private static final int MAX_RANDOM_NUMBER = 25;
 
     public static void start() {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int num1 = Utils.getRandomNumber(1, 25);
-            int num2 = Utils.getRandomNumber(1, 25);
+            int num1 = Utils.getRandomNumber(1, MAX_RANDOM_NUMBER);
+            int num2 = Utils.getRandomNumber(1, MAX_RANDOM_NUMBER);
             char operator = OPERATORS[Utils.getRandomNumber(0, OPERATORS.length - 1)];
 
             String question = num1 + " " + operator + " " + num2;
